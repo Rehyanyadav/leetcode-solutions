@@ -55,28 +55,37 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-04T08:50:40.260Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 22.5 MB (beats 81.41%)  
+**Submitted:** 2026-08-04T08:50:48.536Z  
 
 ```cpp
-int solve(vector<int> & nums){
-    int n  = nums.size();
-    if(n == 0 ){
-        return 0;
-    }
-    int i =0; int j = 0;
-    while( j <n){
-         if(nums[i] != nums[j]){
-            i++;
-            nums[i] = nums[j];
+class Solution {
+public:
 
-         }
-         j++;
+int solve(vector<int> & nums){
+    int n  = nums.size();
+    if(n == 0 ){
+        return 0;
+    }
+    int i =0; int j = 0;
+    while( j <n){
+         if(nums[i] != nums[j]){
+            i++;
+            nums[i] = nums[j];
 
-    }
-    return i+1;
+         }
+         j++;
 
+    }
+    return i+1;
+
+}
+    int removeDuplicates(vector<int>& nums) {
+     return solve(nums);
+         
+    }
+};
 ```
 
 ---
