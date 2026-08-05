@@ -10,24 +10,23 @@ _Description not available._
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-08-05T14:35:07.202Z  
+**Memory:** 8.4 MB  
+**Submitted:** 2026-08-05T14:46:56.513Z  
 
 ```cpp
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
- for (int i =0 ; i<nums.size(); i++){
-    if(nums[i] == 0){
-        for(int j = i+1; j<nums.size(); j++){
-            if(nums[j] != 0){
-                swap(nums[i],nums[j]);
-
+         //* efficient solution 
+         int count = 0;
+         for(int i =0; i<nums.size(); i++){
+            if(nums[i] != 0){
+         }
+                swap(nums[i] , nums[count]);
             }
-        }
     }
- }
-    }
+                count ++;
+                
 };
 
 ```
