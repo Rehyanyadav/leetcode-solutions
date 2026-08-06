@@ -47,7 +47,7 @@ Follow up:
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8.2 MB  
-**Submitted:** 2026-08-06T16:17:21.456Z  
+**Submitted:** 2026-08-06T16:28:00.295Z  
 
 ```cpp
 class Solution {
