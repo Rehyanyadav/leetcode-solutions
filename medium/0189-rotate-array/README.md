@@ -46,25 +46,24 @@ Follow up:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-08-06T16:12:38.466Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-08-06T16:17:21.456Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    void rotate(vector<int>& nums, int k) {
-int temp[k];
-    temp[i] = nums[i];
- 
-     }
-  for(int i =0; i<k; i++)
-    for(int i =k; i<nums.size(); i++)
-       nums[i-k] = nums[i];
-    for(int i = 0; i<k; i++)
-        nums[nums.size() - k +i] = temp[i];
+    void rotate(vector<int>& nums, int k) {
+int temp[k];
+  for(int i =0; i<k; i++)
+    temp[i] = nums[i];
+    for(int i =k; i<nums.size(); i++)
+       nums[i-k] = nums[i];
+    for(int i = 0; i<k; i++)
+        nums[nums.size() - k +i] = temp[i];
 
+ 
+     }
 };
-
 ```
 
 ---
