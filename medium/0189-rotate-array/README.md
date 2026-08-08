@@ -45,24 +45,21 @@ Follow up:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-08-06T16:28:00.295Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 29.6 MB (beats 70.78%)  
+**Submitted:** 2026-08-06T16:28:05.747Z  
 
 ```cpp
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
-int temp[k];
-  for(int i =0; i<k; i++)
-    temp[i] = nums[i];
-    for(int i =k; i<nums.size(); i++)
-       nums[i-k] = nums[i];
-    for(int i = 0; i<k; i++)
-        nums[nums.size() - k +i] = temp[i];
+        int n = nums.size();
+        k = k%n;
+        reverse(nums.begin(),nums.begin()+(n-k));
+        reverse(nums.begin()+(n-k),nums.end());
+        reverse(nums.begin(), nums.end());
 
- 
-     }
+    }
 };
 ```
 
