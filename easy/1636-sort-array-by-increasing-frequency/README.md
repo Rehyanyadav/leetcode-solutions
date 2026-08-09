@@ -38,27 +38,32 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-09T09:26:58.379Z  
+**Runtime:** 2 ms (beats 62.45%)  
+**Memory:** 15.1 MB (beats 66.17%)  
+**Submitted:** 2026-08-09T09:27:04.489Z  
 
 ```cpp
+class Solution {
+public:
+    vector<int> frequencySort(vector<int>& nums) {
+unordered_map<int , int > count;
+for(int num :nums){
+    count[num]++;
 
 }
-sort(nums.begin(),nums.end(), [&count]
-(int a , int b){
-    if(count[a ] == count[b]){
-        return a>b;
+sort(nums.begin(),nums.end(), [&count](int a , int b){
+    if(count[a ] == count[b]){
+        return a>b;
 
-    }
-     return count[a] < count [b];
+    }
+     return count[a] < count [b];
 
-    count[num]++;
-for(int num :nums){
-unordered_map<int , int > count;
-    (vector<int>& nums) {
-    vector<int> frequencySort
+});
 
+return nums;
+
+    }
+};
 ```
 
 ---
