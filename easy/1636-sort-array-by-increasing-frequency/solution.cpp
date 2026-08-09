@@ -1,15 +1,21 @@
+class Solution {
+public:
+    vector<int> frequencySort(vector<int>& nums) {
+unordered_map<int , int > count;
+for(int num :nums){
+    count[num]++;
 
 }
-sort(nums.begin(),nums.end(), [&count]
-(int a , int b){
-    if(count[a ] == count[b]){
-        return a>b;
+sort(nums.begin(),nums.end(), [&count](int a , int b){
+    if(count[a ] == count[b]){
+        return a>b;
 
-    }
-     return count[a] < count [b];
+    }
+     return count[a] < count [b];
 
-    count[num]++;
-for(int num :nums){
-unordered_map<int , int > count;
-    (vector<int>& nums) {
-    vector<int> frequencySort
+});
+
+return nums;
+
+    }
+};
