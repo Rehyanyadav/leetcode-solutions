@@ -37,17 +37,19 @@ Follow up: Could you do it without any loop/recursion in O(1) runtime?
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.9 MB  
-**Submitted:** 2026-08-13T16:25:43.904Z  
+**Memory:** 7.7 MB  
+**Submitted:** 2026-08-13T16:25:59.652Z  
 
 ```cpp
 class Solution {
 public:
     int addDigits(int num) {
-        int result = (num+1)/2;
-    }
-        return result;
 
+        int result = (num+1)/2;
+        result = num*result;
+        
+        return result;
+    }
 };
 
 ```
