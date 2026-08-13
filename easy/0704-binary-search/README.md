@@ -36,21 +36,21 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-13T12:10:50.869Z  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-08-13T12:12:20.629Z  
 
 ```cpp
+                return mid+1;
+            else
                 return high= mid-1;
-
-            }
-
-        
-        
-        
-     
         }
+            if(nums[mid]>target)
+                return mid;
+            if(nums[mid] == target)
+         int mid = low+(high-low)/2;
+         return -1;
     }
-           return -1;
+         
 };
 
 ```
