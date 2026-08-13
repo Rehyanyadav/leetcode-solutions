@@ -2,6 +2,7 @@ class Solution {
 public:
     int addDigits(int num) {
 
-return 1 + (num - 1) % 9;
+        int result = num*(num+1)/2;
+        return result;
     }
 };
