@@ -36,18 +36,19 @@ Follow up: Could you do it without any loop/recursion in O(1) runtime?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.6 MB (beats 80.19%)  
-**Submitted:** 2026-08-13T16:29:29.841Z  
+**Runtime:** 0 ms  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-08-13T16:29:23.276Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int addDigits(int num) {
+    int addDigits(int num) {
 
-return 1 + (num - 1) % 9;
-    }
+return 1 + (num - 1) % 9;
+    }
 };
+
 ```
 
 ---
