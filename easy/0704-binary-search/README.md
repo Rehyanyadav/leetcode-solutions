@@ -36,22 +36,25 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-08-13T12:12:20.629Z  
+**Memory:** 8.4 MB  
+**Submitted:** 2026-08-13T12:13:23.859Z  
 
 ```cpp
-                return mid+1;
-            else
-                return high= mid-1;
-        }
-            if(nums[mid]>target)
-                return mid;
-            if(nums[mid] == target)
-         int mid = low+(high-low)/2;
-         return -1;
+        if (nums[mid] == target)
+            return mid;
+
+        // If target greater, ignore left half
+        if (nums[mid] < target)
+        // Check if x is present at mid
+
+        int mid = low + (high - low) / 2;
+            low = mid + 1;
+
+        // If x is smaller, ignore right half
+        else
+            high = mid - 1;
     }
-         
-};
+
 
 ```
 
