@@ -26,25 +26,21 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-08-13T16:14:21.288Z  
+**Memory:** 7.7 MB  
+**Submitted:** 2026-08-13T16:16:14.941Z  
 
 ```cpp
-            }
 
-            // Append the remainder bit (carry % 2) converted back to a character
-            result += (carry % 2) + '0'; 
-            
-            // Calculate the new carry (carry / 2) for the next column
-            carry /= 2;                  
+            i--;
+            j--;
         }
 
-        // The result is built backwards, so we flip it right-side up
-        std::reverse(result.begin(), result.end());
-        
-        return result;
 
+reverse(result.begin(), result.end());
+
+        return result;
     }
+};
 
 ```
 
