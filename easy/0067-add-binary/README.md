@@ -25,23 +25,55 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-08-13T16:16:14.941Z  
+**Runtime:** 3 ms (beats 18.24%)  
+**Memory:** 9.9 MB (beats 22.88%)  
+**Submitted:** 2026-08-13T16:16:22.804Z  
 
 ```cpp
+class Solution {
+public:
 
-            i--;
-            j--;
-        }
+ int charToInt(char c) {
+        return c - '0';
+    }
 
 
-reverse(result.begin(), result.end());
+    int getBit(const std::string& str, int index) {
+        if (index >= 0) {
+            return charToInt(str[index]);
+        }
+        return 0; // Return 0 if we run out of digits on the left
+    }
+    string addBinary(string a, string b) {
+           string result = "";
+        
 
-        return result;
-    }
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+        int carry = 0;
+
+
+        while (i >= 0 || j >= 0 || carry > 0) {
+
+            int sum = carry + getBit(a, i) + getBit(b, j);
+
+
+            result += std::to_string(sum % 2);
+
+
+            carry = sum / 2;
+
+
+            i--;
+            j--;
+        }
+
+
+reverse(result.begin(), result.end());
+
+        return result;
+    }
 };
-
 ```
 
 ---
