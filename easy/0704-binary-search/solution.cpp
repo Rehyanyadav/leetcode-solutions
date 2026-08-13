@@ -1,15 +1,29 @@
-        if (nums[mid] == target)
-            return mid;
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int low = 0;
+    int high = nums.size() - 1;
+    while (low <= high) {
+/*
 
-        // If target greater, ignore left half
-        if (nums[mid] < target)
-        // Check if x is present at mid
+we can use both 
+int mid = ( low + high ) /2;
+int mid = low+( high-low )/2;
 
-        int mid = low + (high - low) / 2;
-            low = mid + 1;
+second version is generally preffered because it avoids integers overflow
 
-        // If x is smaller, ignore right half
-        else
-            high = mid - 1;
-    }
+*/
+        int mid = low + (high - low) / 2;
+          
+        if (nums[mid] == target)
+            return mid;
+        if (nums[mid] < target)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
 
+    // If we reach here, then element was not present
+    return -1;
+    }
+};
