@@ -1,24 +1,16 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
-     //* using two pointer approach 
+            int l = 0;
+    int r = numbers.size() - 1;
 
-    /*
-    first we initialize 
-    two pointers  left and & right 
+    while (numbers[l] + numbers[r] != target)
+      if (numbers[l] + numbers[r] < target)
+        ++l;
+      else
+        --r;
 
-    */
-    int left = 0;
-    int right = numbers.size()-1;
- while(numbers[left] +numbers[right] !=target){
-    if(numbers[left] + numbers[right] <target){
-        ++left;
-    }
-    else{
-        --right;
+    return {l + 1, r + 1};
 
-    }
-
- }
     }
 };
