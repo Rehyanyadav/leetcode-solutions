@@ -36,26 +36,27 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 97.2 MB (beats 99.57%)  
-**Submitted:** 2026-08-11T12:09:22.183Z  
+**Runtime:** 0 ms  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-08-21T18:24:07.113Z  
 
 ```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
- int min_price = INT_MAX;
-        int max_profit = 0;
-        
-        for (int price : prices) {
-            min_price = min(min_price, price);
-            int current_profit = price - min_price;
-            max_profit = max(max_profit, current_profit);
-        }
-        
-        return max_profit;
-    }
+        int max_profit = 0;
+        
+        for (int price : prices) {
+            min_price = min(min_price, price);
+            int current_profit = price - min_price;
+            max_profit = max(max_profit, current_profit);
+        }
+        
+        return max_profit;
+    }
 };
+ int min_price = INT_MAX;
+    int maxProfit(vector<int>& prices) {
+public:
+class Solution {
+
 ```
 
 ---
