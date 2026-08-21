@@ -36,21 +36,37 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-08-21T10:17:20.067Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 8.6 MB (beats 14.46%)  
+**Submitted:** 2026-08-21T10:17:28.013Z  
 
 ```cpp
 class Solution {
 public:
     int mySqrt(int x) {
-        int i =1;
-        while(i*i<=x){
-            i++;
+        int low = 0;
+        int high = x;
+        int ans = -1;
+        while(low <= high){
+            long long mid = low+(high-low)/2;
+            long long msq = mid * mid;
+            if(msq == x){
+                return mid;
+            }
+            else if(msq <x){
+                ans = mid;
+                low = mid+1;
 
+            }
+            else{
+                high = mid-1;
+            }
 
         }
-             return (i-1);
+
+        
+        return ans;
+
     }
 };
 ```
