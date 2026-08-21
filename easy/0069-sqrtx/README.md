@@ -38,22 +38,21 @@ Constraints:
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 7.9 MB  
-**Submitted:** 2026-08-21T09:42:23.445Z  
+**Submitted:** 2026-08-21T10:08:50.304Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int mySqrt(int x) {
-        int i =1;
-        while(i*i<=x){
-            i++;
+    int mySqrt(int x) {
+        int i =1;
+        while(i*i<=x){
+            i++;
 
-        }
-    }
 
-             return (i-1);
+        }
+             return (i-1);
+    }
 };
-
 ```
 
 ---
