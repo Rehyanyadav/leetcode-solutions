@@ -1,25 +1,25 @@
+class Solution {
+public:
+    int findContentChildren(vector<int>& g, vector<int>& s) {
+         int n =  g.size(); 
+         int m =  s.size();
 
-            if(g[right]<= s[left]){
-                right++;
-         while(left< m  &&  right <n){
-         
-         sort(s.begin(),s.end());
+int left = 0;
+int right = 0;
+         sort(g.begin(),g.end());
+         sort(s.begin(),s.end());
+         
+         while(left< m  &&  right <n){
 
-            }
+            if(g[right]<= s[left]){
+                right++;
+
+            }
 left++;
 
-         sort(g.begin(),g.end());
-int right = 0;
-int left = 0;
+         }
 
-         int m =  s.size();
-         }
-
-    }
-         int n =  g.size(); 
-    int findContentChildren(vector<int>& g, vector<int>& s) {
-public:
-class Solution {
-         return right;
-         
+         return right;
+         
+    }
 };
