@@ -42,36 +42,39 @@ Note: This question is the same as  2410: Maximum Matching of Players With Train
 ## Solution
 
 **Language:** C++  
-**Runtime:** 8 ms (beats 59.56%)  
-**Memory:** 44.9 MB (beats 12.19%)  
-**Submitted:** 2026-08-23T17:24:39.942Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-08-23T17:41:03.534Z  
 
 ```cpp
-class Solution {
-public:
-    int findContentChildren(vector<int>& g, vector<int>& s) {
-         int n =  g.size(); 
-         int m =  s.size();
+//             }
+// left++;
 
-int left = 0;
-int right = 0;
-         sort(g.begin(),g.end());
-         sort(s.begin(),s.end());
-         
-         while(left< m  &&  right <n){
+//          }
 
-            if(g[right]<= s[left]){
-                right++;
+//          return right;
+         
 
-            }
-left++;
 
-         }
 
-         return right;
-         
-    }
-};
+
+         sort(g.begin(), g.end());
+         sort(s.begin(), s.end());
+         int left = 0; int right = 0;
+         while(left<s.size()  && right <g.size()){
+            if(g[right]<= s[left]){
+                right++;
+            }
+
+
+            left++;
+
+         }
+
+         return right;
+
+    }
+
 ```
 
 ---
