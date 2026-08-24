@@ -36,9 +36,9 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.5 MB  
-**Submitted:** 2026-08-24T22:41:08.548Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 7.9 MB (beats 93.14%)  
+**Submitted:** 2026-08-24T22:41:16.661Z  
 
 ```cpp
 class Solution {
@@ -74,6 +74,7 @@ public:
 
         // If min_val is 0, we can successfully close all brackets
         return (min_val == 0);
+        
     }
 };
 ```
