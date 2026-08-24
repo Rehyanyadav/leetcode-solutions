@@ -1,51 +1,27 @@
-#include <stack>
-#include <string>
-
-using namespace std;
-
-class Solution {
+class Solution {
 public:
-    bool checkValidString(string s) {
-        // Track the indices (positions) instead of characters
-        stack<int> openSt;
-        stack<int> starSt;
+    bool checkValidString(string s) {
+         int min_val = 0; // Tracks the minimum possible open brackets '('
+        int max_val = 0; // Tracks the maximum possible open brackets '('
 
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s[i];
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] == '(') {
+                min_val++;
+                max_val++;
+            } 
+            else if (s[i] == ')') {
+                min_val--;
+                max_val--;
+            } 
+            else { // It is an asterisk '*'
+                min_val--; // If '*' acts as ')'
+                max_val++; // If '*' acts as '('
+            }
 
-            if (ch == '(') {
-                openSt.push(i); // Store the index of '('
-            } 
-            else if (ch == '*') {
-                starSt.push(i); // Store the index of '*'
-            } 
-            else { // Current character is ')'
-                // First, try to match with a real opening bracket
-                if (!openSt.empty()) {
-                    openSt.pop();
-                } 
-                // If no '(' is available, try to use a '*' as an opening bracket
-                else if (!starSt.empty()) {
-                    starSt.pop();
-                } 
-                // If neither is available, it's invalid
-                else {
-                    return false;
-                }
-            }
-        }
+            // At any point, if max_val drops below 0, there are too many 
+            closing brackets
+            if (max_val < 0) {
+                return false;
+            }
 
-        // After the loop, match remaining '(' with '*' that appear AFTER them
-        while (!openSt.empty() && !starSt.empty()) {
-            // If the '(' appears AFTER the '*', the '*' cannot balance it (e.g., "*( ")
-            if (openSt.top() > starSt.top()) {
-                return false;
-            }
-            openSt.pop();
-            starSt.pop();
-        }
-
-        // If openSt is empty, all open brackets found a match!
-        return openSt.empty();
-    }
-};
+            // min_val cannot be negative; reset it to 0 (assume '*' acts as 
