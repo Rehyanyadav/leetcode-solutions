@@ -37,38 +37,45 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-08-24T22:39:24.847Z  
+**Memory:** 7.5 MB  
+**Submitted:** 2026-08-24T22:41:08.548Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    bool checkValidString(string s) {
-         int min_val = 0; // Tracks the minimum possible open brackets '('
-        int max_val = 0; // Tracks the maximum possible open brackets '('
+    bool checkValidString(string s) {
+         int min_val = 0; // Tracks the minimum possible open brackets '('
+        int max_val = 0; // Tracks the maximum possible open brackets '('
 
-        for (int i = 0; i < s.length(); i++) {
-            if (s[i] == '(') {
-                min_val++;
-                max_val++;
-            } 
-            else if (s[i] == ')') {
-                min_val--;
-                max_val--;
-            } 
-            else { // It is an asterisk '*'
-                min_val--; // If '*' acts as ')'
-                max_val++; // If '*' acts as '('
-            }
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] == '(') {
+                min_val++;
+                max_val++;
+            } 
+            else if (s[i] == ')') {
+                min_val--;
+                max_val--;
+            } 
+            else { // It is an asterisk '*'
+                min_val--; // If '*' acts as ')'
+                max_val++; // If '*' acts as '('
+            }
 
-            // At any point, if max_val drops below 0, there are too many 
-            closing brackets
-            if (max_val < 0) {
-                return false;
-            }
+            // At any point, if max_val drops below 0, there are too many closing brackets
+            if (max_val < 0) {
+                return false;
+            }
 
-            // min_val cannot be negative; reset it to 0 (assume '*' acts as 
+            // min_val cannot be negative; reset it to 0 (assume '*' acts as empty string instead)
+            if (min_val < 0) {
+                min_val = 0;
+            }
+        }
 
+        // If min_val is 0, we can successfully close all brackets
+        return (min_val == 0);
+    }
+};
 ```
 
 ---
