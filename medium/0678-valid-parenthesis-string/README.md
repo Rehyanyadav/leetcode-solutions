@@ -38,28 +38,27 @@ Constraints:
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 7.8 MB  
-**Submitted:** 2026-08-24T22:23:43.015Z  
+**Submitted:** 2026-08-24T22:25:54.737Z  
 
 ```cpp
-             char topElement = st.top();
-             st.pop();
-
-
-             //* check if pop brackets are matching the current closing brackets
-                 if ((ch == ')' && topElement != '(') ||
-        
             }
         }
 
-        
-                (ch == '}' && topElement != '{') ||
-                (ch == ']' && topElement != '[')) {
+        // After the loop, match remaining '(' with '*' that appear AFTER them
+        while (!openSt.empty() && !starSt.empty()) {
+            // If the '(' appears AFTER the '*', the '*' cannot balance it (e.g., "*( ")
+            if (openSt.top() > starSt.top()) {
                 return false;
             }
-      return st.empty();
+            openSt.pop();
+            starSt.pop();
+        }
 
+        // If openSt is empty, all open brackets found a match!
+        return openSt.empty();
     }
 };
+
 
 ```
 
