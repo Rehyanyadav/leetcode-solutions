@@ -1,23 +1,19 @@
-    if(st.empty()){
-        return false;
-    }
+             char topElement = st.top();
+             st.pop();
 
 
-//* getting top element  and removing it 
- char topElement = st.top();
- st.pop();
+             //* check if pop brackets are matching the current closing brackets
+                 if ((ch == ')' && topElement != '(') ||
+        
+            }
+        }
 
-
-    //* check if pop brackets are matching the 
-    current closing brackets
-     if(ch == ')' && topElement != '(' || 
-
-        (ch == '}' && topElement != '{') ||
-        (ch == ']' && topElement != '[')){
- }
-          }
-        return false;
- return st.empty();
+        
+                (ch == '}' && topElement != '{') ||
+                (ch == ']' && topElement != '[')) {
+                return false;
+            }
+      return st.empty();
 
     }
 };
