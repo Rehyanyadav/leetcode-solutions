@@ -38,29 +38,25 @@ Constraints:
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 7.8 MB  
-**Submitted:** 2026-08-24T21:58:12.274Z  
+**Submitted:** 2026-08-24T22:23:43.015Z  
 
 ```cpp
-    if(st.empty()){
-        return false;
-    }
+             char topElement = st.top();
+             st.pop();
 
 
-//* getting top element  and removing it 
- char topElement = st.top();
- st.pop();
+             //* check if pop brackets are matching the current closing brackets
+                 if ((ch == ')' && topElement != '(') ||
+        
+            }
+        }
 
-
-    //* check if pop brackets are matching the 
-    current closing brackets
-     if(ch == ')' && topElement != '(' || 
-
-        (ch == '}' && topElement != '{') ||
-        (ch == ']' && topElement != '[')){
- }
-          }
-        return false;
- return st.empty();
+        
+                (ch == '}' && topElement != '{') ||
+                (ch == ']' && topElement != '[')) {
+                return false;
+            }
+      return st.empty();
 
     }
 };
