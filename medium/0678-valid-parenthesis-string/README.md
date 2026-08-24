@@ -37,8 +37,8 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.1 MB (beats 47.76%)  
-**Submitted:** 2026-08-24T22:39:29.782Z  
+**Memory:** 8.2 MB (beats 47.76%)  
+**Submitted:** 2026-08-24T22:37:25.746Z  
 
 ```cpp
 class Solution {
