@@ -31,6 +31,5 @@ public:
 
         // If min_val is 0, we can successfully close all brackets
         return (min_val == 0);
-        
     }
 };
