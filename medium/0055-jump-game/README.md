@@ -33,9 +33,9 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-08-25T03:02:09.608Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 52.2 MB (beats 83.33%)  
+**Submitted:** 2026-08-25T03:02:14.637Z  
 
 ```cpp
 class Solution {
@@ -48,14 +48,19 @@ int max_Reach =0;
 // loop till end to the size of array 
 
 for(int i =0; i<nums.size(); i++){
+    //here we check  our current i is excced more than max_Reach
     if(i >max_Reach){
+        // then we will return false
         return false;
 
     }
 
+// now here we will  check  how much farthest jump we are geeting  and set it 
 max_Reach = max(max_Reach , i+ nums[i]);
 
 }
+
+
 return true;
     }
 };
