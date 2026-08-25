@@ -33,28 +33,27 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-08-25T00:02:35.017Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 52.4 MB (beats 57.75%)  
+**Submitted:** 2026-08-25T00:02:41.876Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    bool canJump(vector<int>& nums) {
-int max_Reach =0;
-for(int i =0; i<nums.size(); i++){
-    if(i >max_Reach){
-        return false;
-    }
+    bool canJump(vector<int>& nums) {
+int max_Reach =0;
+for(int i =0; i<nums.size(); i++){
+    if(i >max_Reach){
+        return false;
+
+    }
+
+max_Reach = max(max_Reach , i+ nums[i]);
+
 }
-
-
-    }
-max_Reach = max(max_Reach , i+ nums[i]);
-
-return true;
+return true;
+    }
 };
-
 ```
 
 ---
