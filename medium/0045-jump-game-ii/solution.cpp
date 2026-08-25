@@ -9,8 +9,8 @@ public:
         }
     }
 
-             max_reach = max(max_reach , i +nums[i]);
-
+             max_reach = max(max_reach , i -nums[i]);
         return true;
         
+
 };
