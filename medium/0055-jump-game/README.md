@@ -34,14 +34,19 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 52.4 MB (beats 57.75%)  
-**Submitted:** 2026-08-25T00:02:41.876Z  
+**Memory:** 52.4 MB (beats 25.78%)  
+**Submitted:** 2026-08-25T02:57:17.525Z  
 
 ```cpp
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
+//  here  we have to  keep the maximum index we have reach
 int max_Reach =0;
+
+
+// loop till end to the size of array 
+
 for(int i =0; i<nums.size(); i++){
     if(i >max_Reach){
         return false;
