@@ -41,8 +41,8 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-25T06:03:32.471Z  
+**Memory:** 8 MB  
+**Submitted:** 2026-08-26T16:49:10.757Z  
 
 ```cpp
 class Solution {
@@ -52,14 +52,14 @@ public:
         for(int i =0; i<nums.size(); i++){
              if(i>max_reach){
                 return false;
-             }
-        }
-    }
 
+             }
              max_reach = max(max_reach , i -nums[i]);
+
+        }
         return true;
         
-
+    }
 };
 
 ```
