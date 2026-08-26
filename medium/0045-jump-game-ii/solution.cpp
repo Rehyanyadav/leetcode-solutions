@@ -1,16 +1,15 @@
 class Solution {
 public:
     int jump(vector<int>& nums) {
-        int max_reach =0;
-        for(int i =0; i<nums.size(); i++){
-             if(i>max_reach){
-                return false;
-
-             }
-             max_reach = max(max_reach , i -nums[i]);
-
+        int jumps =0 , current_end= 0 , max_reach = 0;
+        for(int i =0 ; i<nums.size() ; i++){
+            max_reach = max(max_reach , i+nums[i]);
+            if(i == current_end){
         }
-        return true;
-        
+                jumps++;
+            }
     }
+                current_end= max_reach;
+
+        return jumps;
 };
