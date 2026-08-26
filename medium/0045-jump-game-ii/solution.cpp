@@ -2,7 +2,7 @@ class Solution {
 public:
     int jump(vector<int>& nums) {
         int jumps =0 , current_end= 0 , max_reach = 0;
-        for(int i =0 ; i<nums.size() ; i++){
+        for(int i =0 ; i<nums.size()-1 ; i++){
             max_reach = max(max_reach , i+nums[i]);
             if(i == current_end){
         }
