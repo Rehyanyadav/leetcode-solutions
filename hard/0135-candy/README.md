@@ -43,31 +43,38 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-08-28T13:04:15.624Z  
+**Runtime:** 4 ms (beats 23.78%)  
+**Memory:** 71.5 MB (beats 7.06%)  
+**Submitted:** 2026-08-28T13:04:22.323Z  
 
 ```cpp
-     }
-             candies[i] = candies[i-1]+1;
-        }
+class Solution {
+public:
+    int candy(vector<int>& ratings) {
+      int n = ratings.size();
+      vector<int> candies(n,1);
 
-     for(int i = n-2; i>=0; i--){
-        if(ratings[i]> ratings[i+1]){
-            candies[i] = max(candies[i] ,candies[i
-        }
-            +1] +1);
-     }
 
-     int totalCandies = 0;
-     for(int i =0; i<n; i++){
-        totalCandies+= candies[i];
-     }
-     return totalCandies;
-    }
+     for(int i = 1; i<n; i++){
+        if(ratings[i]> ratings [i-1]){
+             candies[i] = candies[i-1]+1;
+
+        }
+     }
+     for(int i = n-2; i>=0; i--){
+        if(ratings[i]> ratings[i+1]){
+            candies[i] = max(candies[i] ,candies[i+1] +1);
+        }
+     }
+
+     int totalCandies = 0;
+     for(int i =0; i<n; i++){
+        totalCandies+= candies[i];
+     }
+     return totalCandies;
+    }
 
 };
-
 ```
 
 ---
