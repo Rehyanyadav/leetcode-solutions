@@ -42,27 +42,42 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.6 MB  
-**Submitted:** 2026-08-29T00:37:07.724Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 21.9 MB (beats 22.34%)  
+**Submitted:** 2026-08-29T00:37:12.711Z  
 
 ```cpp
-            i++;
+class Solution {
+public:
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
+        vector<vector<int>> result;
+        int n = intervals.size();
+        int i =0;
+        //* Left side 
+        while(i<n && intervals[i][1] < newInterval[0] ){
+            result.push_back(intervals[i]);
+            i++;
 
-        }
-        result.push_back(newInterval);
-        while(i<n){
-            result.push_back(intervals[i]);
-            i++;
+        }
 
-        }
+        while(i<n && intervals[i][0] <= newInterval[1]){
+            newInterval[0] = min(newInterval[0], intervals[i][0]);
+            newInterval[1] = max(newInterval[1] , intervals[i][1]);
+            i++;
 
-        return result;
+        }
+        result.push_back(newInterval);
+        while(i<n){
+            result.push_back(intervals[i]);
+            i++;
 
-    }
+        }
+
+        return result;
+
+    }
 
 };
-
 ```
 
 ---
