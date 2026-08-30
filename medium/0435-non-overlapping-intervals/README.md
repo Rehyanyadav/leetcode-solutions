@@ -41,42 +41,29 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 43 ms (beats 67.43%)  
-**Memory:** 94 MB (beats 39.13%)  
-**Submitted:** 2026-08-20T17:59:36.701Z  
+**Runtime:** 0 ms  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-08-30T15:57:59.846Z  
 
 ```cpp
-class Solution {
+for(int i =1; i<intervals.size(); i++){
+    if(intervals[i][0] >= last_end_time){
+
+
+      int last_end_time = intervals[0][1];
+
+
+      int removed_count = 0;
+      sort (intervals.begin(), intervals.end(),compare);
+
+}
+    int eraseOverlapIntervals(vector<vector<int>>& intervals) {
+      if(intervals.empty()) return 0;
+    return a[1]< b[1];
+
 public:
-    int eraseOverlapIntervals(vector<vector<int>>& intervals) {
-        //* greedy approach 
-        //* Activity selection 
-        
-        if (intervals.empty()) {
-            return 0;
-        }
-
-        // Sort intervals by their end times
-        // Using a custom lambda function ensures we prioritize the earliest end time
-        sort(intervals.begin(), intervals.end(), [](const vector<int>& a, const vector<int>& b) {
-            return a[1] < b[1];
-        });
-
-        int count_non_overlapping = 1;
-        int last_end = intervals[0][1];
-
-        // Greedily pick intervals that start after or when the last one ends
-        for (size_t i = 1; i < intervals.size(); ++i) {
-            if (intervals[i][0] >= last_end) {
-                count_non_overlapping++;
-                last_end = intervals[i][1];
-            }
-        }
-
-        // Minimum removals needed = Total intervals minus maximum compatible intervals
-        return intervals.size() - count_non_overlapping;
-    }
-};
+static bool compare (vector<int> & a, vector<int> & b){
+class Solution {
 
 ```
 
