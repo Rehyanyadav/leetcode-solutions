@@ -39,9 +39,9 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-08-30T00:07:15.798Z  
+**Runtime:** 3 ms (beats 89.00%)  
+**Memory:** 23.8 MB (beats 59.70%)  
+**Submitted:** 2026-08-30T00:07:20.889Z  
 
 ```cpp
 class Solution {
@@ -63,6 +63,8 @@ if (intervals.empty()) return {};
 
           }
           return result;
+//Time  complexity is O(NLogN) because  -> n for loop traversal and logn for  sorting O(n)+O(logn)
+
 
     }
 };
