@@ -17,6 +17,8 @@ if (intervals.empty()) return {};
 
           }
           return result;
+//Time  complexity is O(NLogN) because  -> n for loop traversal and logn for  sorting O(n)+O(logn)
+
 
     }
 };
