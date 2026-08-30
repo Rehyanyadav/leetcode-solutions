@@ -39,27 +39,33 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-30T00:05:41.133Z  
+**Runtime:** 4 ms (beats 66.48%)  
+**Memory:** 23.9 MB (beats 59.70%)  
+**Submitted:** 2026-08-30T00:05:46.435Z  
 
 ```cpp
-          for(int i =1; i<intervals.size(); i++){
-            if(intervals[i][0] <= result.back()[1]){
-                result.back()[1] = max(result.back()[1],intervals[i][1]);
-            }
+class Solution {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+if (intervals.empty()) return {};
+          sort(intervals.begin(), intervals.end());
+          vector<vector<int>> result;
+          result.push_back(intervals[0]);
+          for(int i =1; i<intervals.size(); i++){
+            if(intervals[i][0] <= result.back()[1]){
+                result.back()[1] = max(result.back()[1],intervals[i][1]);
 
-            else{
-                result.push_back(intervals[i]);
-            }
+            }
+            else{
+                result.push_back(intervals[i]);
 
+            }
 
-          }
-          return result;
+          }
+          return result;
 
-    }
+    }
 };
-
 ```
 
 ---
