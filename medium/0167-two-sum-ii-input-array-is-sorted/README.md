@@ -47,27 +47,30 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.4 MB (beats 65.60%)  
-**Submitted:** 2026-08-15T15:38:09.937Z  
+**Runtime:** 0 ms  
+**Memory:** 8.5 MB  
+**Submitted:** 2026-09-01T15:47:34.191Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
-            int l = 0;
-    int r = numbers.size() - 1;
+    vector<int> twoSum(vector<int>& numbers, int target) {
 
-    while (numbers[l] + numbers[r] != target)
-      if (numbers[l] + numbers[r] < target)
-        ++l;
-      else
-        --r;
 
-    return {l + 1, r + 1};
+            int l = 0;
+    int r = numbers.size() - 1;
 
-    }
+    while (numbers[l] + numbers[r] != target)
+      if (numbers[l] + numbers[r] < target)
+        ++l;
+      else
+        --r;
+
+    return {l + 1, r + 1};
+
+    }
 };
+
 ```
 
 ---
