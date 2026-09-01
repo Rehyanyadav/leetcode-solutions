@@ -55,35 +55,40 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-01T23:10:45.123Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 22.6 MB (beats 80.70%)  
+**Submitted:** 2026-09-01T23:10:49.512Z  
 
 ```cpp
-        
-        int i =0;  // creating the slow pointer which will be  keep track of the  unique 
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        
+        //* here we checked array is empty or not 
+        if(nums.empty()) return 0;
 
-        for( int j =0; j<nums.size(); j++){
-             if(nums[j]!= nums[i]){
-        }
-                i++;
-             }
-                nums[i] = nums[j];
+        int i =0;  // creating the slow pointer which will be  keep track of the  unique element
+
+     //here we traverse through the array  by using second pointer  
+        for( int j =0; j<nums.size(); j++){
+            // if  jth element is not equal to ith element 
+             if(nums[j]!= nums[i]){
+    // increment the i
+                i++;
+
+                // and overwrite  the duplicate element with new element
+                nums[i] = nums[j];
 
 
-        //* here we checked array is empty or not 
-        if(nums.empty()) return 0;
-        element
-     //here we traverse through the array  by using second pointer  
-            // if  jth element is not equal to ith element 
-    // increment the i
+             }
+        }
 
-                // and overwrite  the duplicate element with new element
+    // then return the unique element 
+         return  (i+1);
 
 
-    // then return the unique element 
-         return  (i+1);
-
+    }
+};
 ```
 
 ---
