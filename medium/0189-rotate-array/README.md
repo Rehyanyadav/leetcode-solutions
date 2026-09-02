@@ -45,22 +45,24 @@ Follow up:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 263.4 MB (beats 22.43%)  
-**Submitted:** 2026-09-01T23:15:37.515Z  
+**Runtime:** 0 ms  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-09-02T21:36:38.648Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    void rotate(vector<int>& nums, int k) {
-        int n = nums.size();
-        k = k%n;
-        reverse(nums.begin(),nums.begin()+(n-k));
-        reverse(nums.begin()+(n-k),nums.end());
-        reverse(nums.begin(), nums.end());
+    void rotate(vector<int>& nums, int k) {
+     int n = nums.size();
+      k = k%n;
 
-    }
+     reverse(nums.begin(), nums.end());
+     reverse(nums.begin(),nums.begin() + k );
+    }
+     reverse(nums.begin() +k ,nums.end());
+
 };
+
 ```
 
 ---
