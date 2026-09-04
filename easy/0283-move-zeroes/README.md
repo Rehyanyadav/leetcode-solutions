@@ -30,26 +30,25 @@ Follow up: Could you minimize the total number of operations done?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-04T11:32:17.056Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 23.9 MB (beats 55.77%)  
+**Submitted:** 2026-09-04T11:32:21.578Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    void moveZeroes(vector<int>& nums) {
-          //* efficient solution 
-         int count = 0;
-         for(int i =0; i<nums.size(); i++){
-            if(nums[i] != 0){
-                swap(nums[i] , nums[count]);
-                count ++;
-                
-            }
-         }
-    }
+    void moveZeroes(vector<int>& nums) {
+          //* efficient solution 
+         int count = 0;
+         for(int i =0; i<nums.size(); i++){
+            if(nums[i] != 0){
+                swap(nums[i] , nums[count]);
+                count ++;
+                
+            }
+         }
+    }
 };
-
 ```
 
 ---
