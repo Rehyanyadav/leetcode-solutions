@@ -30,30 +30,29 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-05T05:23:46.532Z  
+**Runtime:** 3 ms (beats 17.99%)  
+**Memory:** 50.3 MB (beats 33.85%)  
+**Submitted:** 2026-09-05T05:23:53.234Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int findMaxConsecutiveOnes(vector<int>& nums) {
-        int count = 0;
-        int maxi = 0;
-        
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] == 1) {
-                count++;
-                maxi = max(maxi, count); // Is my current streak a new record?
-            } else {
-                count = 0; // Streak broken, reset to 0
-            }
-        }
-        
-        return maxi;
-    }
+    int findMaxConsecutiveOnes(vector<int>& nums) {
+        int count = 0;
+        int maxi = 0;
+        
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] == 1) {
+                count++;
+                maxi = max(maxi, count); // Is my current streak a new record?
+            } else {
+                count = 0; // Streak broken, reset to 0
+            }
+        }
+        
+        return maxi;
+    }
 };
-
 ```
 
 ---
