@@ -44,23 +44,22 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-06T10:55:29.756Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 20.6 MB (beats 58.64%)  
+**Submitted:** 2026-09-06T10:55:35.550Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int singleNumber(vector<int>& nums) {
-        int result =0;
-        for(int i = 0; i<nums.size(); i++){
-            result =  result ^nums[i];
-        }
-        return result;
-    }
-        
+    int singleNumber(vector<int>& nums) {
+        int result =0;
+        for(int i = 0; i<nums.size(); i++){
+            result =  result ^nums[i];
+        }
+        return result;
+        
+    }
 };
-
 ```
 
 ---
