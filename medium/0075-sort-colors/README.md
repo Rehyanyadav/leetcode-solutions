@@ -51,28 +51,28 @@ Follow up: Could you come up with a one-pass algorithm using only constant ext
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-08T02:36:42.598Z  
+**Memory:** 8.4 MB  
+**Submitted:** 2026-09-08T02:37:36.304Z  
 
 ```cpp
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int low = 0, mid = 0, high = nums.size() - 1;
-        
-        while (mid <= high) {
-            if (nums[mid] == 0) {
-                swap(nums[low], nums[mid]);
+        int low =0 , mid = 0 , high = nums.size()-1;
+        while(mid <= high){
+            if(nums[mid] == 0){
+                swap(nums[low] , nums[mid]);
                 low++;
                 mid++;
-            } 
-            else if (nums[mid] == 1) {
+
+            }
+            else if(nums[mid]== 1){
                 mid++;
-            } 
-            else { 
-                swap(nums[mid], nums[high]);
+            }
+            else{
+                swap(nums[mid] , nums [high]);
                 high--;
-                
+
             }
         }
     }
