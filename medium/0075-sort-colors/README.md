@@ -50,34 +50,33 @@ Follow up: Could you come up with a one-pass algorithm using only constant ext
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-09-08T02:37:36.304Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 11.7 MB (beats 48.85%)  
+**Submitted:** 2026-09-08T02:37:40.807Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    void sortColors(vector<int>& nums) {
-        int low =0 , mid = 0 , high = nums.size()-1;
-        while(mid <= high){
-            if(nums[mid] == 0){
-                swap(nums[low] , nums[mid]);
-                low++;
-                mid++;
+    void sortColors(vector<int>& nums) {
+        int low =0 , mid = 0 , high = nums.size()-1;
+        while(mid <= high){
+            if(nums[mid] == 0){
+                swap(nums[low] , nums[mid]);
+                low++;
+                mid++;
 
-            }
-            else if(nums[mid]== 1){
-                mid++;
-            }
-            else{
-                swap(nums[mid] , nums [high]);
-                high--;
+            }
+            else if(nums[mid]== 1){
+                mid++;
+            }
+            else{
+                swap(nums[mid] , nums [high]);
+                high--;
 
-            }
-        }
-    }
+            }
+        }
+    }
 };
-
 ```
 
 ---
