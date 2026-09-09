@@ -32,29 +32,28 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-09T02:41:42.118Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 28.3 MB (beats 14.69%)  
+**Submitted:** 2026-09-09T02:41:49.518Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int majorityElement(vector<int>& nums) {
-        int count = 0;
-        int candidate =0;
-        for(int num :nums){
-            if(count == 0){
-        }
-                candidate = num;
-            }
-    }
+    int majorityElement(vector<int>& nums) {
+        int count = 0;
+        int candidate =0;
+        for(int num :nums){
+            if(count == 0){
+                candidate = num;
 
-            count += (num == candidate ) ? 1:-1;
+            }
+            count += (num == candidate ) ? 1:-1;
 
-        return candidate;
+        }
+        return candidate;
 
+    }
 };
-
 ```
 
 ---
