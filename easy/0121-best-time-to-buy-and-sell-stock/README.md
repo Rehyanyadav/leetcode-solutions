@@ -37,10 +37,14 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-08-21T18:24:07.113Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-09-10T13:34:59.251Z  
 
 ```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+ int min_price = INT_MAX;
         int max_profit = 0;
         
         for (int price : prices) {
@@ -52,10 +56,6 @@ Constraints:
         return max_profit;
     }
 };
- int min_price = INT_MAX;
-    int maxProfit(vector<int>& prices) {
-public:
-class Solution {
 
 ```
 
