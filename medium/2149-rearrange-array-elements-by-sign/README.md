@@ -52,32 +52,31 @@ It is not required to do the modifications in-place.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-09-11T15:58:26.548Z  
+**Runtime:** 12 ms (beats 22.34%)  
+**Memory:** 128.2 MB (beats 95.34%)  
+**Submitted:** 2026-09-11T15:58:33.638Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    vector<int> rearrangeArray(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> ans(n, 0);
-        int posIndex = 0, negIndex = 1;
-        
-        for (int i = 0; i < n; i++) {
-            if (nums[i] > 0) {
-                ans[posIndex] = nums[i];
-                posIndex += 2;
-            } else {
-                ans[negIndex] = nums[i];
-                negIndex += 2;
-            }
-        }
-        
-        return ans;
-    }
+    vector<int> rearrangeArray(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> ans(n, 0);
+        int posIndex = 0, negIndex = 1;
+        
+        for (int i = 0; i < n; i++) {
+            if (nums[i] > 0) {
+                ans[posIndex] = nums[i];
+                posIndex += 2;
+            } else {
+                ans[negIndex] = nums[i];
+                negIndex += 2;
+            }
+        }
+        
+        return ans;
+    }
 };
-
 ```
 
 ---
