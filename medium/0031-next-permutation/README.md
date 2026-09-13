@@ -52,29 +52,30 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-13T04:49:58.296Z  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-09-13T04:50:10.562Z  
 
 ```cpp
-         }
-           break;
-             }
-          if(ind ==1){
-           reverse(nums.begin() , nums.end());
-            }
+        }
+        
+        if (ind == -1) {
+        // If no break-point exists, reverse the 
+            reverse(nums.begin(), nums.end());
             return;
-       for(int i  =n-1; i>ind; i--){
-         if(nums[i]> nums[ind]){
-            swap(nums[i], nums[ind]);
-            break;
-             }
-           ind = i;
-          if(nums[i]<nums[i+1]){
-       for(int i =0; i<n; i++){
-          }
-     reverse(nums.begin() + ind+1 , nums.end());
-
-
+        }
+        
+        // Step 2: Find the next greater element and 
+        for (int i = n - 1; i > ind; i--) {
+            if (nums[i] > nums[ind]) {
+                swap(nums[i], nums[ind]);
+                break;
+        entire array
+        swap
+            }
+        }
+        
+        // Step 3: Reverse the right half
+        reverse(nums.begin() + ind + 1, nums.end());
     }
 };
 
