@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int maxDepth(string s) {
+        int maxDepth = 0;
+        int currentDepth = 0;
+        int i =0;
+
+    for(i = 0; i<s.size(); i++){
+        if(s[i] == '('){
+            currentDepth++;
+            maxDepth = max(currentDepth , maxDepth);
+
+        }
+        else if( s[i] == ')'){
+            currentDepth--;
+
+        }
+      }
+      return maxDepth;
+    }
+};
