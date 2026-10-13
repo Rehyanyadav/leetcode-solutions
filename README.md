@@ -6,19 +6,19 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 148 |
-| Easy | 62 |
+| Total Solved | 149 |
+| Easy | 63 |
 | Medium | 78 |
 | Hard | 8 |
-| Current Streak | 10 days |
-| Last Synced | 10/12/2026 |
+| Current Streak | 11 days |
+| Last Synced | 10/13/2026 |
 
 ## Languages
 
 | Language | Solutions |
 |----------|-----------|
-| C++ | 147 |
+| C++ | 148 |
 | unknown | 1 |
 
 ---
-*Last updated: 2026-10-12T01:07:46.930Z*
+*Last updated: 2026-10-13T04:37:53.567Z*
