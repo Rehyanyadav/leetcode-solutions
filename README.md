@@ -3,11 +3,11 @@
   <h2>LeetCode Solutions</h2>
   <p>Automated with <a href="https://chromewebstore.google.com/detail/lfichjfhhjffkefegggfocoaamejdlpm"><strong>LeetCommit</strong></a> &bull; Synchronized directly to GitHub</p>
   <p>
-    <img src="https://img.shields.io/badge/Total%20Solved-173-brightgreen?style=flat-square&logo=leetcode" alt="Total Solved" />
+    <img src="https://img.shields.io/badge/Total%20Solved-174-brightgreen?style=flat-square&logo=leetcode" alt="Total Solved" />
     <img src="https://img.shields.io/badge/Streak-7%20Days-orange?style=flat-square&logo=flame" alt="Streak" />
     <img src="https://img.shields.io/badge/Easy-73-60B5A6?style=flat-square" alt="Easy" />
     <img src="https://img.shields.io/badge/Medium-89-FFB800?style=flat-square" alt="Medium" />
-    <img src="https://img.shields.io/badge/Hard-11-FF2D55?style=flat-square" alt="Hard" />
+    <img src="https://img.shields.io/badge/Hard-12-FF2D55?style=flat-square" alt="Hard" />
   </p>
 </div>
 
@@ -17,10 +17,10 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Total Solved** | 173 |
+| **Total Solved** | 174 |
 | **🟢 Easy** | 73 |
 | **🟡 Medium** | 89 |
-| **🔴 Hard** | 11 |
+| **🔴 Hard** | 12 |
 | **🔥 Current Streak** | 7 days |
 | **🕒 Last Synced** | 11/28/2026 |
 
@@ -28,7 +28,7 @@
 
 | Language | Solutions |
 | :--- | :--- |
-| **C++** | 172 |
+| **C++** | 173 |
 | **unknown** | 1 |
 
 ---
