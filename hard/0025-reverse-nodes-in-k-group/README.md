@@ -45,7 +45,7 @@ Output: [3,2,1,4,5]
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 16.4 MB (beats 46.68%)  
-**Submitted:** 2026-11-28T08:00:07.067Z  
+**Submitted:** 2026-11-28T08:10:23.338Z  
 
 ```cpp
 /**
@@ -63,6 +63,8 @@ class Solution {
 
 private: 
    ListNode* getKthNode(ListNode* start , int k ){
+
+
     ListNode* curr = start;
     for(int i =0 ; i< k  && curr != nullptr;i++){
         curr = curr->next;
@@ -112,7 +114,7 @@ public:
             prevGroupTail->next = newGroupHead;
             groupStart->next = nextGroupHead;
 
-
+    //  
             prevGroupTail = groupStart;
         }
 
