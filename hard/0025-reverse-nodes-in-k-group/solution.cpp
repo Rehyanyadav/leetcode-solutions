@@ -13,6 +13,8 @@ class Solution {
 
 private: 
    ListNode* getKthNode(ListNode* start , int k ){
+
+
     ListNode* curr = start;
     for(int i =0 ; i< k  && curr != nullptr;i++){
         curr = curr->next;
@@ -62,7 +64,7 @@ public:
             prevGroupTail->next = newGroupHead;
             groupStart->next = nextGroupHead;
 
-
+    //  
             prevGroupTail = groupStart;
         }
 
